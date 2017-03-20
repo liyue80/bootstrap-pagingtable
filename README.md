@@ -158,4 +158,8 @@ delete                  |rowId/rowIds           |Before sending deleted row id t
 deleted                 |rowId/rowIds, response |After sending deleted row id to remote server.
 deleteError             |rowId/rowIds, jqXHR    |Deleting row failed.
 
+## Q&A (by liyue80)
+Q: How to reload the table after changed the Option->remote->params.
+A: $('#your-table-id').off('.pagingtable').removeData('pagingtable').empty();
+
 =======
