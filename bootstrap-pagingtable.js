@@ -318,6 +318,9 @@
   };
   
   PagingTable.prototype.parseData = function(json) {
+    if (typeof json === 'string') {
+      json = JSON.parse(json);
+    }
     var options = this.options;
     var paramNames = options.paramNames;
     var rowDataSet = json[paramNames.records];
